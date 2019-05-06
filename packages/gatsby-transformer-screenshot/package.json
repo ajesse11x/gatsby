@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "better-queue": "^3.8.10"
+    "better-queue": "^3.8.10",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -32,6 +33,9 @@
     "build-lambda-package": "npm run prepare-lambda-package && cp chrome/headless_shell.tar.gz lambda-dist && cd lambda-dist && zip -rq ../lambda-package.zip .",
     "prepare-lambda-package": "babel lambda --out-dir lambda-dist && cp lambda/package.json lambda-dist/package.json && cd lambda-dist && PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1 npm install --production",
     "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "babel -w src --out-dir . --ignore **/__tests__"
-  }
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
