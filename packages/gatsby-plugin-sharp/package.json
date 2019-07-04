@@ -20,7 +20,8 @@
     "probe-image-size": "^4.0.0",
     "progress": "^1.1.8",
     "sharp": "^0.20.2",
-    "svgo": "^0.7.2"
+    "svgo": "^0.7.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -43,7 +44,10 @@
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
     "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "babel -w src --out-dir . --ignore **/__tests__"
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-  "gitHead": "5bd5aebe066b9875354a81a4b9ed98722731c465"
+  "gitHead": "5bd5aebe066b9875354a81a4b9ed98722731c465",
+  "snyk": true
 }
