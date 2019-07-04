@@ -29,7 +29,8 @@
     "stack-trace": "^0.0.10",
     "update-notifier": "^2.3.0",
     "yargs": "^11.1.0",
-    "yurnalist": "^0.2.1"
+    "yurnalist": "^0.2.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -49,10 +50,13 @@
   "scripts": {
     "build": "babel src --out-dir lib --ignore **/__tests__",
     "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "babel -w src --out-dir lib --ignore **/__tests__"
+    "watch": "babel -w src --out-dir lib --ignore **/__tests__",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "yargs": {
     "boolean-negation": false
   },
-  "gitHead": "5bd5aebe066b9875354a81a4b9ed98722731c465"
+  "gitHead": "5bd5aebe066b9875354a81a4b9ed98722731c465",
+  "snyk": true
 }
