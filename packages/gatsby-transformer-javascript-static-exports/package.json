@@ -10,7 +10,8 @@
     "@babel/parser": "^7.0.0",
     "@babel/runtime": "^7.0.0",
     "@babel/traverse": "^7.0.0",
-    "bluebird": "^3.5.0"
+    "bluebird": "^3.5.0",
+    "snyk": "^1.192.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -31,6 +32,9 @@
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
     "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "babel -w src --out-dir . --ignore **/__tests__"
-  }
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
