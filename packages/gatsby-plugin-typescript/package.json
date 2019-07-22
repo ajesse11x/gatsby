@@ -12,7 +12,8 @@
   "dependencies": {
     "@babel/preset-typescript": "^7.0.0",
     "@babel/runtime": "^7.0.0",
-    "babel-plugin-remove-graphql-queries": "^2.0.2-rc.3"
+    "babel-plugin-remove-graphql-queries": "^2.0.2-rc.3",
+    "snyk": "^1.192.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -34,6 +35,9 @@
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
     "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "babel -w src --out-dir . --ignore **/__tests__"
-  }
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
