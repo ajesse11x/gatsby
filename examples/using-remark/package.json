@@ -37,13 +37,17 @@
     "slash": "^1.0.0",
     "typeface-space-mono": "^0.0.22",
     "typeface-spectral": "^0.0.29",
-    "typography": "^0.16.17"
+    "typography": "^0.16.17",
+    "snyk": "^1.305.1"
   },
   "license": "MIT",
   "main": "index.js",
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
-  }
+    "serve": "gatsby serve",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
