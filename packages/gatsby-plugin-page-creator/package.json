@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
     "watch": "babel -w src --out-dir . --ignore **/__tests__",
-    "prepare": "cross-env NODE_ENV=production npm run build"
+    "prepare": "npm run snyk-protect && cross-env NODE_ENV=production npm run build",
+    "snyk-protect": "snyk protect"
   },
   "keywords": [
     "gatsby",
@@ -25,7 +26,8 @@
     "glob": "^7.1.1",
     "lodash": "^4.17.10",
     "parse-filepath": "^1.0.1",
-    "slash": "^1.0.0"
+    "slash": "^1.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -35,5 +37,6 @@
   "peerDependencies": {
     "gatsby": ">2.0.0-alpha"
   },
-  "gitHead": "5bd5aebe066b9875354a81a4b9ed98722731c465"
+  "gitHead": "5bd5aebe066b9875354a81a4b9ed98722731c465",
+  "snyk": true
 }
