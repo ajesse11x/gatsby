@@ -8,7 +8,8 @@
     "gatsby": "^2.0.0",
     "gatsby-plugin-styletron": "^3.0.0",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "snyk": "^1.317.0"
   },
   "keywords": [
     "gatsby"
@@ -17,6 +18,9 @@
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build"
-  }
+    "build": "gatsby build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
