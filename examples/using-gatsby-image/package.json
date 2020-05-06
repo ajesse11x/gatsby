@@ -20,12 +20,16 @@
     "typeface-oswald": "0.0.54",
     "typeface-pt-sans": "0.0.54",
     "typography": "^0.16.6",
-    "typography-theme-elk-glen": "^0.16.9"
+    "typography-theme-elk-glen": "^0.16.9",
+    "snyk": "^1.319.0"
   },
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build"
-  }
+    "build": "gatsby build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
