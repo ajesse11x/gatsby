@@ -73,7 +73,8 @@
     "typography-plugin-code": "^1.0.0-alpha.0",
     "zipkin": "^0.14.0",
     "zipkin-javascript-opentracing": "^1.6.0",
-    "zipkin-transport-http": "^0.14.0"
+    "zipkin-transport-http": "^0.14.0",
+    "snyk": "^1.332.1"
   },
   "keywords": [
     "gatsby"
@@ -87,12 +88,15 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scrapeStarters": "cd src/data/StarterShowcase && node scraper.js"
+    "scrapeStarters": "cd src/data/StarterShowcase && node scraper.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "front-matter": "^2.3.0",
     "get-package-json-from-github": "^1.2.1",
     "github-api": "^3.0.0",
     "webshot": "^0.18.0"
-  }
+  },
+  "snyk": true
 }
