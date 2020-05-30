@@ -12,7 +12,8 @@
     "lodash": "^4.17.10",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "slash": "^2.0.0"
+    "slash": "^2.0.0",
+    "snyk": "^1.332.1"
   },
   "keywords": [
     "gatsby"
@@ -21,6 +22,9 @@
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build"
-  }
+    "build": "gatsby build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
