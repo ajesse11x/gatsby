@@ -46,7 +46,7 @@
     "gatsby-transformer-sharp": "^2.1.1",
     "gatsby-transformer-yaml": "^2.1.1",
     "glamor": "^2.20.40",
-    "graphql-request": "1.6.0",
+    "graphql-request": "2.0.0",
     "gray-percentage": "^2.0.0",
     "hex2rgba": "^0.0.1",
     "lodash": "^4.17.10",
@@ -73,7 +73,7 @@
     "typography-plugin-code": "^1.0.0-alpha.0",
     "zipkin": "^0.14.0",
     "zipkin-javascript-opentracing": "^1.6.0",
-    "zipkin-transport-http": "^0.14.0"
+    "zipkin-transport-http": "^0.16.0"
   },
   "keywords": [
     "gatsby"
