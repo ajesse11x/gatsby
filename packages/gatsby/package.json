@@ -103,7 +103,7 @@
     "react-error-overlay": "^3.0.0",
     "react-hot-loader": "^4.1.0",
     "redux": "^3.6.0",
-    "relay-compiler": "1.5.0",
+    "relay-compiler": "13.0.0",
     "request": "^2.85.0",
     "shallow-compare": "^1.2.2",
     "sift": "^5.1.0",
