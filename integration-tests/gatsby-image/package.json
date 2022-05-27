@@ -10,9 +10,9 @@
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
-    "gatsby-plugin-sharp": "^2.0.0-rc.7",
+    "gatsby-plugin-sharp": "^4.8.0",
     "gatsby-source-filesystem": "next",
-    "gatsby-transformer-sharp": "^2.1.1-rc.3",
+    "gatsby-transformer-sharp": "^4.8.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0"
